@@ -23,3 +23,10 @@ async def set_redirect_page_url(url: str):
     global REDIRECT_URL
     REDIRECT_URL = "https://" + url + ".com"
     return f"New url: {REDIRECT_URL}"
+
+
+@app.get("/zap/{url}", status_code=status.HTTP_200_OK)
+async def set_zap_url(number: str):
+    global REDIRECT_URL
+    REDIRECT_URL = "https://" + "wa.me/" + number
+    return f"New url: {REDIRECT_URL}"
