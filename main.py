@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-REDIRECT_URL = ""
+REDIRECT_URL = "/"
 
 
 @app.get("/", status_code=status.HTTP_200_OK, response_class=HTMLResponse)
