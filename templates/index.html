@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando</title>
+
+    <!-- Pixel do TikTok -->
+
+    <!-- Fim do Pixel do TikTok -->
+
+    <meta http-equiv="refresh" content="3; url={{ url }}" />
+</head>
+<body>
+
+    <p>Redirecionando em <span id="countdown">3</span> segundos...</p>
+
+    <script>
+        var countdownTime = 3;
+        var countdownElement = document.getElementById('countdown');
+
+        var countdownInterval = setInterval(function() {
+            countdownElement.textContent = countdownTime;
+            countdownTime--;
+            if (countdownTime < 0) {
+                clearInterval(countdownInterval);
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
