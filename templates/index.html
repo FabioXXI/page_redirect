@@ -13,16 +13,16 @@
 </head>
 <body>
 
-    <p>Redirecionando em <span id="countdown">3</span> segundos...</p>
+    <p>Redirecionando em <span id="countdown">2</span> segundos...</p>
 
     <script>
-        var countdownTime = 3;
+        var countdownTime = 2;
         var countdownElement = document.getElementById('countdown');
 
         var countdownInterval = setInterval(function() {
             countdownElement.textContent = countdownTime;
             countdownTime--;
-            if (countdownTime < 0) {
+            if (countdownTime <= 0) {
                 clearInterval(countdownInterval);
             }
         }, 1000);
