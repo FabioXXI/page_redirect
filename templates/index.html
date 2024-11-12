@@ -16,13 +16,13 @@
     <p>Redirecionando em <span id="countdown">1</span> segundos...</p>
 
     <script>
-        var countdownTime = 1;
+        var countdownTime = 1; // Tempo do contador em segundos
         var countdownElement = document.getElementById('countdown');
 
         var countdownInterval = setInterval(function() {
             countdownElement.textContent = countdownTime;
             countdownTime--;
-            if (countdownTime <= 0) {
+            if (countdownTime < 0) { // Para o contador ao chegar a 0
                 clearInterval(countdownInterval);
             }
         }, 1000);
