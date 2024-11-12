@@ -25,8 +25,8 @@ async def set_redirect_page_url(url: str):
     return f"New url: {REDIRECT_URL}"
 
 
-@app.get("/zap/{number}", status_code=status.HTTP_200_OK)
-async def set_zap_url(number: str):
+@app.get("/zap", status_code=status.HTTP_200_OK)
+async def set_zap_url():
     global REDIRECT_URL
-    REDIRECT_URL = "https://" + "wa.me/" + number + ".com"
-    return f"New url: {REDIRECT_URL}"
+    REDIRECT_URL = "https://api.whatsapp.com/send/?phone=5527995127940&text&type=phone_number&app_absent=0"
+    return "Zap set"
