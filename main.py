@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-REDIRECT_URL = "https://wa.me/5527995127940?text=Olá%20gostaria%20de%20saber%20mais%20sobre!"
+REDIRECT_URL = "https://wa.me/5527992785764?text=Olá%20gostaria%20de%20saber%20mais%20sobre!"
 
 
 @app.get("/", status_code=status.HTTP_200_OK, response_class=HTMLResponse)
